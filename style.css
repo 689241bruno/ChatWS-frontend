@@ -10,15 +10,13 @@
 }
 
 body {
-  height: 100dvh;
-  background-image: radial-gradient(gray, black);
- 
+  background-color: rgb(31, 31, 31);
   color: white;
 }
 
 
 .bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
