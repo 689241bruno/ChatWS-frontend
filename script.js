@@ -119,10 +119,12 @@ const sendMessage = (event) => {
   chatInput.value = "";
 };
 
-window.scrollTo({
-  top: document.body.scrollHeight,
-  behavior: "smooth",
-});
+const scrollScreen = () => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+};
 
 loginForm.addEventListener("submit", handleLogin);
 chatForm.addEventListener("submit", sendMessage);
