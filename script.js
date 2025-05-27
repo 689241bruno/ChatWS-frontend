@@ -92,16 +92,22 @@ const handleLogin = (event) => {
   login.style.display = "none";
   chat.style.display = "flex";
 
-  websocket = new WebSocket("ws://192.168.0.100:8080");
+  websocket = new WebSocket("https://websocket-nl7f.onrender.com");
 
-  websocket.onopen = () =>
+  websocket.onopen = () => {
     websocket.send(`Usuário: ${user.nome} entrou no chat`);
+  };
   websocket.onmessage = processMessage;
   console.log(user);
 };
 
 const sendMessage = (event) => {
   event.preventDefault();
+
+  if (websocket.readyState !== WebSocket.OPEN) {
+    alert("A conexão com o servidor ainda não foi estabelecida.");
+    return;
+  }
   const message = {
     userID: user.id,
     userName: user.nome,
