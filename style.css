@@ -114,6 +114,44 @@ body {
   width: 100%;
 }
 
+.chat__input_image > span {
+  cursor: pointer;
+}
+
+.containerImage {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.829);
+}
+
+.containerImage > img {
+  max-width: 80%;
+  max-height: 70%;
+}
+
+.btn_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 60px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.btn_send {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 60px;
+  font-weight: 600;
+  font-size: 2em;
+  cursor: pointer;
+}
+
 .chat__input {
   border: none;
   padding: 15px;
@@ -141,7 +179,6 @@ body {
 .chat__messages > div {
   padding: 10px;
   width: 100%;
-  max-width: 250px;
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 15px;
@@ -187,6 +224,7 @@ body {
 }
 
 .message--self {
+  max-width: 250px;
   background-color: rgb(247, 247, 247);
   color: black;
   border-radius: 10px 10px 0px 10px;
@@ -197,7 +235,24 @@ body {
   animation: fadeMessageSelf 0.3s ease-in-out;
 }
 
+.message--self--img > img {
+  margin-bottom: 20px;
+}
+
+.message--self--img {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  border-radius: 10px 10px 0px 10px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeMessageSelf 0.3s ease-in-out;
+  max-width: 350px;
+}
+
 .message--other {
+  max-width: 250px;
   background-color: rgb(46, 46, 46);
   color: white;
   border-radius: 0px 10px 10px 10px;

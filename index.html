@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_right_alt"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+
     <link rel="stylesheet" href="style.css" />
     <style></style>
     <title>TecChat</title>
@@ -29,10 +30,16 @@
 
       <section class="chat">
         <section class="chat__messages">
-          <!-- <div class="message--self">
+          <div class="message--self">
             Hellow word
             <span class="hora">12:00</span>
           </div>
+          <!--
+          <div class="message--self--img">
+            <img class="imageChat" />
+            <span class="hora">12:00</span>
+          </div>
+           
 
           <div class="message--other">
             <p class="message--sender">bruno</p>
@@ -41,6 +48,18 @@
         </section>
 
         <form action="" class="chat__form">
+          <label for="inputImage" class="chat__input_image"
+            ><span class="material-symbols-outlined" style="font-size: 3em">
+              add_photo_alternate
+            </span></label
+          >
+          <input
+            type="file"
+            accept="image/*"
+            class="imageInput"
+            style="display: none"
+            id="inputImage"
+          />
           <input
             type="text"
             class="chat__input"
@@ -51,6 +70,11 @@
             <span class="material-symbols-outlined">arrow_right_alt</span>
           </button>
         </form>
+        <div class="containerImage">
+          <img class="image" />
+          <span class="material-symbols-outlined btn_close"> close </span>
+          <span class="material-symbols-outlined btn_send">send</span>
+        </div>
       </section>
     </section>
 
